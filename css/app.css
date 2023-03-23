@@ -96,6 +96,12 @@ section{
 .page-header{
     color:var(--main-color);
     padding : 2rem 9%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 999;
 
 }
 .navbar a{
@@ -132,7 +138,7 @@ cursor: pointer;
     }
 .hero p span{
    
-color: var(--active-color);
+color: var(--maain-color);
 }
 
 .container{
@@ -156,7 +162,11 @@ justify-content: space-between;
     justify-content: space-around;
     align-items: center;
 }
-
+.catalog .product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
 .catalog{
 
 }
@@ -168,6 +178,11 @@ justify-content: space-between;
     color:var(--active-color);
     padding-bottom: 2rem;
     text-align: center;
+    margin-top: 6rem;
+}
+.hero{
+    margin-top: 7rem;
+    position: relative;
 }
 .header span{
     color:var(--main-color);
@@ -192,14 +207,15 @@ display: inline-block;
     border-radius: 4%;
 }
 .catalog .product-container .product .content {
-text-align: 4rem;
+text-align: center;
 padding: 1rem 0;    
 }
+
 .catalog .product-container .product .content h3{
 font-size: 2.2rem;
 color:var(--main-color);
 padding-bottom: 0.5rem;
-}
+} 
 .catalog .product-container .product .content .image{
     height: 35rem;
     width: 100%;
@@ -215,6 +231,28 @@ padding-bottom: 0.5rem;
 font-size: 2rem;
 color: var(--active-color);
 }
+
+.catalog .product-container .product {
+    position: relative;
+}
+.catalog .product-container .product .icons{
+position: absolute;
+top: 1rem;
+right: 1rem;
+z-index: 10;
+} 
+
+.catalog .product-container .product .icons a{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    background-color: #fff;
+    color: #130f40;
+    text-align: center;
+} 
 
 /* footer */
 
@@ -263,4 +301,32 @@ background-color: darkslategray;
 }
 .h4{
     padding: .5rem 1rem;
+}
+
+.badge {
+display: inline-block;
+padding: .35rem .65rem;
+font-size: 1.2rem;
+line-height: 1;
+text-align: center;
+white-space: nowrap;
+vertical-align: baseline;
+}
+.product .image .badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+}
+.bg-sale{
+    background-color: red;
+
+}
+.bg-new{
+    background-color: green;
+
+}
+.bg-action{
+    background-color: orange;
+
 }
